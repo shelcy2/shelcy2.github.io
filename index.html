@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+c<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Shelcy Govada- Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -57,54 +57,745 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section section-dark">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced About Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Enhanced About Section */
+        .about-section {
+            padding: 6rem 0;
+            position: relative;
+            background: rgba(15, 23, 42, 0.8);
+            overflow: hidden;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(239, 68, 68, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title h2 {
+            font-size: 3.5rem;
+            color: #f8fafc;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-title .highlight {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        .section-title .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: #64748b;
+            font-weight: 300;
+        }
+
+        /* Main About Content */
+        .about-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+            margin-bottom: 5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Left Side - Profile & Stats */
+        .about-profile {
+            position: relative;
+        }
+
+        .profile-showcase {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 2.5rem;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-showcase::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: conic-gradient(from 0deg, transparent, rgba(245, 158, 11, 0.1), transparent);
+            animation: rotate 8s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .profile-showcase:hover {
+            transform: translateY(-10px);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 3;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .profile-avatar:hover {
+            transform: scale(1.1);
+            box-shadow: 0 20px 40px rgba(245, 158, 11, 0.4);
+        }
+
+        .profile-avatar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .profile-name {
+            font-size: 1.8rem;
+            color: #f8fafc;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-title {
+            color: #f59e0b;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Animated Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 3;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .stat-item:hover::before {
+            left: 100%;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(245, 158, 11, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            filter: grayscale(0);
+        }
+
+        .stat-value {
+            color: #f8fafc;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Right Side - About Text & Skills */
+        .about-content {
+            position: relative;
+        }
+
+        .about-story {
+            margin-bottom: 3rem;
+        }
+
+        .story-text {
+            color: #cbd5e1;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .story-text::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            border-radius: 2px;
+        }
+
+        .highlight-text {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+
+        /* Enhanced Skills Section */
+        .skills-showcase {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .skills-title {
+            color: #f8fafc;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .skills-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            border-radius: 1px;
+        }
+
+        .skill-categories {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover::before {
+            transform: scaleX(1);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-category h4 {
+            color: #f59e0b;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skill-tag:hover {
+            background: rgba(245, 158, 11, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.2);
+        }
+
+        /* Call to Action */
+        .about-cta {
+            text-align: center;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-text {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: white;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #f8fafc;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-main {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .skill-categories {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Enhanced About Section -->
+    <section class="about-section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title fade-in">
                 <h2><span class="highlight">About</span> Me</h2>
-                <p class="section-subtitle">Get to know me better</p>
+                <p class="section-subtitle">Discover my journey, passion, and expertise</p>
             </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="about-card">
-                        <h3>Quick Facts</h3>
-                        <div class="facts-list">
-                            <p>📍 Location: Your City</p>
-                            <p>💼 Experience: 4+ Years</p>
-                            <p>🎓 Education: Computer Science</p>
-                            <p>🌟 Projects: 20+ Completed</p>
+
+            <div class="about-main">
+                <!-- Left Side - Profile & Stats -->
+                <div class="about-profile slide-in-left">
+                    <div class="profile-showcase">
+                        <div class="profile-header">
+                            <div class="profile-avatar" onclick="document.getElementById('profileInput').click()">
+                                <span>YN</span>
+                                <input type="file" id="profileInput" accept="image/*" style="display: none;">
+                            </div>
+                            <div class="profile-name">Your Name</div>
+                            <div class="profile-title">Full Stack Developer</div>
+                        </div>
+
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-icon">📍</div>
+                                <div class="stat-value">USA</div>
+                                <div class="stat-label">Location</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">💼</div>
+                                <div class="stat-value">4+</div>
+                                <div class="stat-label">Years Exp</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">🎓</div>
+                                <div class="stat-value">CS</div>
+                                <div class="stat-label">Degree</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">🚀</div>
+                                <div class="stat-value">50+</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="about-text-container">
-                    <p class="about-text">
-                        I am a Computer Science graduate with a passion for developing innovative solutions that solve real-world problems. I enjoy problem-solving and coding, always striving to bring 100% to the work I do.
-                    </p>
-                    <p class="about-text">
-                        I have experience working with modern web technologies and have developed multiple applications that impact users positively. I'm always eager to learn new technologies and take on challenging projects.
-                    </p>
-                    <div class="tech-list">
-                        <div class="tech-category">
-                            <h4>Languages</h4>
-                            <p>JavaScript, Python, Java, TypeScript, C++</p>
-                        </div>
-                        <div class="tech-category">
-                            <h4>Frameworks</h4>
-                            <p>React, Node.js, Django, Flask, Express</p>
-                        </div>
-                        <div class="tech-category">
-                            <h4>Databases</h4>
-                            <p>MongoDB, PostgreSQL, MySQL, Redis</p>
-                        </div>
-                        <div class="tech-category">
-                            <h4>Tools</h4>
-                            <p>Git, Docker, AWS, Linux, VS Code</p>
+
+                <!-- Right Side - Story & Skills -->
+                <div class="about-content slide-in-right">
+                    <div class="about-story">
+                        <p class="story-text">
+                            I'm a <span class="highlight-text">passionate Computer Science graduate</span> with an insatiable curiosity for technology and innovation. My journey began with a simple "Hello, World!" and has evolved into creating complex solutions that impact thousands of users.
+                        </p>
+                        <p class="story-text">
+                            What drives me? The thrill of <span class="highlight-text">turning ideas into reality</span> through code. Whether it's architecting scalable backends, crafting intuitive user interfaces, or diving deep into emerging technologies, I bring dedication and creativity to every project.
+                        </p>
+                        <p class="story-text">
+                            When I'm not coding, you'll find me exploring the latest tech trends, contributing to open-source projects, or sharing knowledge with the developer community. <span class="highlight-text">Let's build something amazing together!</span>
+                        </p>
+                    </div>
+
+                    <div class="skills-showcase">
+                        <h3 class="skills-title">🛠️ My Toolkit</h3>
+                        <div class="skill-categories">
+                            <div class="skill-category">
+                                <h4>💻 Languages</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">C++</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>⚡ Frameworks</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Django</span>
+                                    <span class="skill-tag">Flask</span>
+                                    <span class="skill-tag">Express</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>🗄️ Databases</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">MongoDB</span>
+                                    <span class="skill-tag">PostgreSQL</span>
+                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">Redis</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>🔧 Tools</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">Linux</span>
+                                    <span class="skill-tag">VS Code</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="about-cta fade-in">
+                <p class="cta-text">"Looking for an opportunity to work in a challenging position combining my skills in Software Engineering"</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Let's Connect</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // Profile image upload
+        document.getElementById('profileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const avatar = document.querySelector('.profile-avatar');
+                    avatar.innerHTML = `<img src="${e.target.result}" alt="Profile" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animation elements
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Stats counter animation
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target.toString().includes('+') ? target : target + '+';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start).toString();
+                }
+            }, 16);
+        }
+
+        // Trigger counter animations when stats are visible
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statValues = entry.target.querySelectorAll('.stat-value');
+                    statValues.forEach(stat => {
+                        const text = stat.textContent;
+                        if (text.includes('+')) {
+                            const num = parseInt(text.replace('+', ''));
+                            stat.textContent = '0';
+                            animateCounter(stat, num);
+                        }
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statsObserver.observe(document.querySelector('.stats-grid'));
+
+        // Skill tag hover effects
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.animation = 'pulse 0.5s ease';
+            });
+            
+            tag.addEventListener('animationend', function() {
+                this.style.animation = '';
+            });
+        });
+
+        // Add CSS for pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
 
     <!-- Experience Section -->
     <section id="experience" class="section section-light">
