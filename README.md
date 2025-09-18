@@ -50,19 +50,13 @@ I specialize in building scalable web applications, designing APIs, and deployin
 - 🔗 [Portfolio Website](https://shelcy2.github.io) – Personal portfolio showcasing my work  
 - 🔗 [More Projects](https://github.com/shelcy2?tab=repositories)  
 
----
-
-## 📊 GitHub Stats  
-
-![Shelcy's GitHub stats](https://github-readme-stats.vercel.app/api?username=shelcy2&show_icons=true&theme=tokyonight)  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shelcy2&layout=compact&theme=tokyonight)  
 
 ---
 
 ## 🌐 Connect with Me  
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/YOUR-LINKEDIN)  
-[![Email](https://img.shields.io/badge/Email-shelcy@example.com-red?logo=gmail)](mailto:shelcy@example.com)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/g-shelcy2)  
+[![Email](https://img.shields.io/badge/Email-gshelcy2@gmail.com-red?logo=gmail)](mailto:gshelcy2@gmail.com)  
 
 ---
 ✨ *Thanks for visiting my profile!*
